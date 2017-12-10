@@ -3,9 +3,9 @@ package com.ylj.com.myqzone.app;
 import android.app.Application;
 import android.content.Context;
 
-import com.ylj.com.myqzone.dagger.components.DaggerNetComponents;
-import com.ylj.com.myqzone.dagger.components.NetComponents;
-import com.ylj.com.myqzone.dagger.modules.NetModules;
+import com.ylj.com.myqzone.dagger.components.DaggerNetComponent;
+import com.ylj.com.myqzone.dagger.components.NetComponent;
+import com.ylj.com.myqzone.dagger.modules.NetModule;
 
 
 /**
@@ -14,7 +14,7 @@ import com.ylj.com.myqzone.dagger.modules.NetModules;
 
 public class MyQzoneApplication extends Application {
 
-    private NetComponents netComponent;
+    private NetComponent netComponent;
      private static MyQzoneApplication instance;
     @Override
     public void onCreate() {
@@ -24,9 +24,9 @@ public class MyQzoneApplication extends Application {
     }
 
     private void initPresenter() {
-        netComponent = DaggerNetComponents.builder().netModules(new NetModules()).build();
+        netComponent = DaggerNetComponent.builder().netModule(new NetModule()).build();
     }
-    public NetComponents getNetComponent() {
+    public NetComponent getNetComponent() {
         return netComponent;
     }
     public static MyQzoneApplication getInstance() {

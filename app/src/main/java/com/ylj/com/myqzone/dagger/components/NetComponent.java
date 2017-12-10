@@ -1,6 +1,6 @@
 package com.ylj.com.myqzone.dagger.components;
 
-import com.ylj.com.myqzone.dagger.modules.NetModules;
+import com.ylj.com.myqzone.dagger.modules.NetModule;
 import com.ylj.com.myqzone.model.api.ApiService;
 
 import javax.inject.Singleton;
@@ -12,9 +12,9 @@ import retrofit2.Retrofit;
 /**
  * Created by pc on 2017/12/6.
  */
-@Component(modules = NetModules.class)
+@Component(modules = NetModule.class)
 @Singleton
-public interface NetComponents {
+public interface NetComponent {
     ApiService getApiService();
     OkHttpClient getOkHttp();
     Retrofit getRetrofit();

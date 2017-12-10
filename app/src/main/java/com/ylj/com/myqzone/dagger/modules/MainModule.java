@@ -9,10 +9,10 @@ import dagger.Provides;
  * Created by pc on 2017/12/5.
  */
 @Module
-public class MainModules {
+public class MainModule {
     private final MainContract.View view;
 
-    public MainModules(MainContract.View view) {
+    public MainModule(MainContract.View view) {
         this.view = view;
     }
     @Provides

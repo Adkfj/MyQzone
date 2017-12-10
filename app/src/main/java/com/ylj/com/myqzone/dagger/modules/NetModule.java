@@ -21,7 +21,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by pc on 2017/12/6.
  */
 @Module
-public class NetModules {
+public class NetModule {
     @Provides
     @Singleton
     public OkHttpClient provideOkHttpClient() {
@@ -40,7 +40,7 @@ public class NetModules {
     public Retrofit provideRetrofit(OkHttpClient okhttpClient) {
         Retrofit retrofit = new Retrofit.Builder()
                 .client(okhttpClient)
-                .baseUrl("http://static.owspace.com/")
+                .baseUrl("http://192.168.1.104:8080/pycircle/")
                 .addConverterFactory(StringConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(EntityUtils.gson))//
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
