@@ -16,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.MainActivity">
+
+
+        <activity android:name=".view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,12 +26,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.LoginActivity"
-            android:label="@string/title_activity_login" />
+            android:name=".view.MainActivity"
+            android:label="主界面" />
         <activity
             android:name=".view.PresonActivity"
-            android:label="@string/title_activity_preson"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="个人中心"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".view.RegisterActivity"
+            android:label="注册"/>
     </application>
 
 </manifest>
