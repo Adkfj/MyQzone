@@ -16,7 +16,7 @@ public class PresonModule {
         this.view = view;
     }
     @Provides
-    public PresonContrct.View providesPresonView(){
+    public PresonContrct.View providePresonView(){
         return view;
     }
 }

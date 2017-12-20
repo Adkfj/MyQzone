@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface MainContract {
     interface Presenter{
-        void getDatas();
+        void getDatas(String username,String password);
     }
     interface View{
         void showLoading();

@@ -40,7 +40,7 @@ public class NetModule {
     public Retrofit provideRetrofit(OkHttpClient okhttpClient) {
         Retrofit retrofit = new Retrofit.Builder()
                 .client(okhttpClient)
-                .baseUrl("http://192.168.1.104:8080/pycircle/")
+                .baseUrl("http://1740k0d313.51mypc.cn/pycircle/")
                 .addConverterFactory(StringConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(EntityUtils.gson))//
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())

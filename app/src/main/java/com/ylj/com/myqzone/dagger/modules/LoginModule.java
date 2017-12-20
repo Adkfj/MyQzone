@@ -16,7 +16,7 @@ public class LoginModule {
         this.view = view;
     }
     @Provides
-    public LoginContrct.View providesMainView(){
+    public LoginContrct.View provideLoginView(){
         return view;
     }
 }

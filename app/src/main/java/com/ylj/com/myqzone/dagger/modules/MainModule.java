@@ -16,7 +16,7 @@ public class MainModule {
         this.view = view;
     }
     @Provides
-    public MainContract.View providesMainView(){
+    public MainContract.View provideMainView(){
      return view;
     }
 }
